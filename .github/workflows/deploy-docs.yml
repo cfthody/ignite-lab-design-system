@@ -17,17 +17,17 @@ on:
             node-version: 16
 
         - name: Install Dependencies
-        - uses: borales/actions-yarn@v3.0.0
+        - uses: Borales/actions-yarn@v3
             with:
               cmd: install
 
         - name: Build Storybook
-        - uses: borales/actions-yarn@v3.0.0
+        - uses: Borales/actions-yarn@v3
             with:
               cmd: build-storybook
 
         - name: Deploy Storybook
-        - uses: borales/actions-yarn@v3.0.0
+        - uses: Borales/actions-yarn@v3
             with:
               cmd: deploy-storybook -- --install --existing-output-dir=storybook-static
           env:
